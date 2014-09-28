@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS Tutorials</title>
+</head>
+<body>
+
+  <div ng-app="">
+    <input type="text" ng-model="greeting.text">
+    <h1>{{ greeting.text }}</h1>
+
+    <div ng-controller="HelloController">
+      <input type="text" ng-model="greeting.text">
+      <h1> {{ greeting.text }}</h1>
+    </div>
+
+  </div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src="controllers.js"></script>
+
+</body>
+</html>
