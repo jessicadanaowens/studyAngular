@@ -6,12 +6,19 @@
 <body>
 
   <div ng-app="">
-    <input type="text" ng-model="greeting.text">
-    <h1>{{ greeting.text }}</h1>
 
-    <div ng-controller="HelloController">
-      <input type="text" ng-model="greeting.text">
-      <h1> {{ greeting.text }}</h1>
+
+    <div ng-controller="CartController">
+      <h1> Your Order</h1>
+
+      <div ng-repeat='item in items'>
+        <span>{{item.title}}</span>
+        <input ng-model='item.quantity'>
+        <span>{{item.price | currency}}</span>
+        <span>{{item.price * item.quantity | currency}}</span>
+        <button ng-click="remove($index)">Remove</button>
+      </div>
+
     </div>
 
   </div>
